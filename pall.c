@@ -6,10 +6,10 @@
  * @counter: line counter
  * Return: void
  */
-void o_pall(stack_t **stack, __attribute__((unused)) unsigned int counter)
+void o_pall(stack_t **stack, unsigned int counter)
 {
 	stack_t *temp;
-	(void) counter;
+	(void)counter;
 
 	temp = *stack;
 	if (temp == NULL)
