@@ -14,7 +14,6 @@ int main(int argc, char **argv)
 	char *buffer = NULL;
 	size_t bufsize = 0;
 	ssize_t characters;
-	bool file_not_empty = true;
 	stack_t *stack = NULL;
 	unsigned int counter = 0;
 
@@ -30,10 +29,10 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (file_not_empty)
+	while (characters > 0)
 	{
 		buffer = NULL;
-		characters = getline(&buffer, &bufsize, file);
+		characters = getline(&buffer, &bufsize, file);		
 		var.data = buffer;
 		counter++;
 		if (characters > 0)
