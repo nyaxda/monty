@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	while (characters > 0)
 	{
 		buffer = NULL;
-		characters = getline(&buffer, &bufsize, file);		
+		characters = getline(&buffer, &bufsize, file);
 		var.data = buffer;
 		counter++;
 		if (characters > 0)
