@@ -3,7 +3,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include <string.h>
+#include <stddef.h>
 #include <sys/types>
 #include <unistd.h>
 #include <ctype.h>
@@ -43,10 +45,11 @@ typedef struct variables
 {
     char *arg;
     FILE *file;
-    char *buffer;
+    char *data;
     int storque;
 } vars;
 extern vars var;
 
-int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
+int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont);
+
 #endif /*MONTY_H*/
