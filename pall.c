@@ -8,12 +8,12 @@
  */
 void o_pall(stack_t **stack, __attribute__((unused)) unsigned int counter)
 {
-    stack_t *temp;
+	stack_t *temp;
 
-    temp = *stack;
-    while (temp != NULL)
-    {
-        printf("%d\n", temp->n);
-        temp = temp->next;
-    }
+	temp = *stack;
+	while (temp != NULL)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+	}
 }
