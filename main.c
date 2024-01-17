@@ -33,8 +33,11 @@ int main(int argc, char **argv)
         counter++;
         execute(&stack, counter, file, buffer);
         free(buffer);
+        buffer = NULL;
     }
     stack_free(stack);
+    if (buffer != NULL)
+        free(buffer);
     fclose(file);
     return (0);
 }
