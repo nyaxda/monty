@@ -1,4 +1,5 @@
 #include "monty.h"
+/* global variable */
 vars var = {NULL, NULL, NULL, 0};
 /**
  * main - entry point to the program
