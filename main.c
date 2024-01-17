@@ -24,6 +24,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
+	var.file = file;
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -31,18 +32,15 @@ int main(int argc, char **argv)
 	}
 	while (file_not_empty)
 	{
+		buffer = NULL;
 		characters = getline(&buffer, &bufsize, file);
-		if (characters == -1)
-			break;
 		var.data = buffer;
 		counter++;
-		execute(&stack, counter, file, buffer);
+		if (characters > 0)
+			execute(&stack, counter, file, buffer);
 		free(buffer);
-		buffer = NULL;
 	}
 	stack_free(stack);
-	if (buffer != NULL)
-		free(buffer);
 	fclose(file);
 	return (0);
 }
