@@ -14,10 +14,7 @@ void add_dnodeint(stack_t **head, int n)
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		fclose(var.file);
-		free(var.data);
-		stack_free(*head);
+		fprintf(stderr, "Error: malloc failed\n");s
 		exit(EXIT_FAILURE);
 	}
 	new_node->n = n;
