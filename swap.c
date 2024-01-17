@@ -8,17 +8,17 @@
  */
 void o_swap(stack_t **stack, unsigned int counter)
 {
-    int temp;
+	int temp;
 
-    if (*stack == NULL || (*stack)->next == NULL)
-    {
-        fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
-        fclose(var.file);
-        free(var.data);
-        stack_free(*stack);
-        exit(EXIT_FAILURE);
-    }
-    temp = (*stack)->n;
-    (*stack)->n = (*stack)->next->n;
-    (*stack)->next->n = temp;
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", counter);
+		fclose(var.file);
+		free(var.data);
+		stack_free(*stack);
+		exit(EXIT_FAILURE);
+	}
+	temp = (*stack)->n;
+	(*stack)->n = (*stack)->next->n;
+	(*stack)->next->n = temp;
 }
