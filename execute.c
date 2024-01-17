@@ -34,7 +34,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
     if (options[i].opcode == NULL)
     {
         fprintf(stderr, "L%d: unknown instruction %s\n", counter, token);
-        free(content);
+        free(cont);
         fclose(file);
         stack_free(*stack);
         exit(EXIT_FAILURE);

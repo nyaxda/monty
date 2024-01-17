@@ -28,7 +28,7 @@ int main(int argc, char **argv)
     {
         if ((characters = getline(&buffer, &bufsize, file)) == -1)
                 break;
-        var.data = characters;
+        var.data = buffer;
         counter++;
         if (*buffer == '\n')
         {
