@@ -51,5 +51,9 @@ typedef struct variables
 extern vars var;
 
 int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont);
+void o_push(stack_t **head, unsigned int counter);
+void stack_free(stack_t *stack);
+void add_dnodeint(stack_t **head, int n);
+void add_dnodeint_end(stack_t **head, int n);
 
 #endif /*MONTY_H*/
