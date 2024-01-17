@@ -22,7 +22,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
         {"add",o_add},
         {"nop",o_nop},
         {NULL, NULL}
-    }
+    };
     token = strtok(cont, " \n\t");
     if (token == NULL)
         return (0);
