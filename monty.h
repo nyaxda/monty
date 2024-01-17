@@ -43,7 +43,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * variables - variables used in the program
+ * struct variables - variables used in the program
  * @arg: argument
  * @file: file pointer
  * @data: data
