@@ -13,7 +13,7 @@ void o_pint(stack_t **stack, unsigned int counter)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", counter);
 		fclose(var.file);
 		free(var.data);
-		stack_free(*head);
+		stack_free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
