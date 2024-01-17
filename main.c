@@ -6,6 +6,7 @@ vars var = {NULL, NULL, NULL, 0};
  * main - entry point to the program
  * @argc: argument counter
  * @argv: array of arguments
+ * Return: 0 on success
  */
 int main(int argc, char **argv)
 {
