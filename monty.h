@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stddef.h>
-#include <sys/types>
+#include <sys/types.h>
 #include <unistd.h>
 #include <ctype.h>
 #include <fcntl.h>
