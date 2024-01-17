@@ -42,6 +42,14 @@ typedef struct instruction_s
 		void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * variables - variables used in the program
+ * @arg: argument
+ * @file: file pointer
+ * @data: data
+ * @storque: stack or queue
+ */
+*/
 typedef struct variables
 {
 	char *arg;
