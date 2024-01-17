@@ -57,5 +57,6 @@ void stack_free(stack_t *stack);
 void add_dnodeint(stack_t **head, int n);
 void add_dnodeint_end(stack_t **head, int n);
 void o_pall(stack_t **stack, __attribute__((unused)) unsigned int counter);
+void o_pint(stack_t **stack, unsigned int counter);
 
 #endif /*MONTY_H*/
