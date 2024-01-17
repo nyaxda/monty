@@ -15,6 +15,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
     instruction_t options[] = 
     {
         {"push",o_push},
+        {"pall",o_pall}
     };
     token = strtok(cont, " \n\t");
     if (token == NULL)

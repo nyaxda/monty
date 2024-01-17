@@ -31,12 +31,6 @@ int main(int argc, char **argv)
                 break;
         var.data = buffer;
         counter++;
-        if (*buffer == '\n')
-        {
-                free(buffer);
-                buffer = NULL;
-                continue;
-        }
         execute(&stack, counter, file, buffer);
         free(buffer);
     }
