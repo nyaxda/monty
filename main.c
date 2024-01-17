@@ -1,5 +1,5 @@
 #include "monty.h"
-
+vars var = {NULL, NULL, NULL, 0};
 /**
  * main - entry point to the program
  * @argc: arguement counter
@@ -12,6 +12,7 @@ int main(int argc, char **argv)
     size_t bufsize = 0;
     ssize_t characters;
     bool file_not_empty = true;
+    stack_t *stack = NULL;
     unsigned int counter = 0;
 
     if (argc != 2)
