@@ -60,4 +60,5 @@ void o_pall(stack_t **stack, __attribute__((unused)) unsigned int counter);
 void o_pint(stack_t **stack, unsigned int counter);
 void o_pop(stack_t **stack, unsigned int counter);
 void o_swap(stack_t **stack, unsigned int counter);
+void o_add(stack_t **stack, unsigned int counter);
 #endif /*MONTY_H*/
