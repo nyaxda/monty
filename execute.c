@@ -17,6 +17,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
         {"push", o_push},
         {"pall", o_pall},
         {"pint",o_pint},
+        {"pop", o_pop},
         {NULL, NULL}
     };
     token = strtok(cont, " \n\t");
