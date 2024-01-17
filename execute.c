@@ -18,7 +18,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
 		{"pint", o_pint},
 		{"pop", o_pop},
 		{"swap", o_swap},
-		{"add", o_add},\
+		{"add", o_add},
 		{"nop", o_nop},
 		{NULL, NULL}
 	};
