@@ -49,7 +49,7 @@ typedef struct instruction_s
  * @data: data
  * @storque: stack or queue
  */
-*/
+
 typedef struct variables
 {
 	char *arg;
