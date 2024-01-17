@@ -10,6 +10,7 @@ void o_push(stack_t **head, unsigned int counter)
 {
 	int i, j = 0;
 	bool flag = true;
+
 	if (var.arg)
 	{
 		if (var.arg[0] == '-')
