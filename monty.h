@@ -77,4 +77,5 @@ void o_pchar(stack_t **stack, unsigned int counter);
 void o_mod(stack_t **stack, unsigned int counter);
 void o_pstr(stack_t **stack, unsigned int counter);
 void o_rotl(stack_t **stack, unsigned int counter);
+void o_rotr(stack_t **stack, unsigned int counter);
 #endif /*MONTY_H*/
