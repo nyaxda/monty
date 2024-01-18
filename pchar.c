@@ -10,7 +10,7 @@ void o_pchar(stack_t **stack, unsigned int counter)
 {
 	if (*stack == NULL)
 	{
-		fprintf(stderr, "L%d: can't pchar, value out of range\n", counter);
+		fprintf(stderr, "L%d: can't pchar, stack empty\n", counter);
 		free(var.data);
 		fclose(var.file);
 		stack_free(*stack);
