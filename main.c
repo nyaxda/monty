@@ -1,44 +1,45 @@
-#define _POSIX_C_SOURCE 200809L
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <unistd.h>
+#include "monty.h"
+/* global variable */
+vars var = {NULL, NULL, NULL, 0};
 
 /**
  * main - entry point to the program
- * @argc: arguement counter
- * @argv: array of arguements
+ * @argc: argument counter
+ * @argv: array of arguments
+ * Return: 0 on success
  */
 int main(int argc, char **argv)
 {
-        FILE *file;
-        char *buffer = NULL;
-        size_t bufsize = 0;
-        ssize_t characters;
-        bool file_not_empty = true;
+	FILE *file;
+	char *buffer = NULL;
+	size_t bufsize = 0;
+	ssize_t characters;
+	stack_t *stack = NULL;
+	unsigned int counter = 0;
 
-        if (argc != 2)
-        {
-                fprintf(stderr, "USAGE: monty file\n");
-                exit(EXIT_FAILURE);
-        }
-        if ((file = fopen(argv[1], "r")) == NULL)
-        {
-                fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-                exit(EXIT_FAILURE);
-        }
-        while (file_not_empty)
-        {
-                if ((characters = getline(&buffer, &bufsize, file)) == -1)
-                        break;
-                if (*buffer == '\n')
-                {
-                        free(buffer);
-                        buffer = NULL;
-                        continue;
-                }
-        }
-        free(buffer);
-        fclose(file);
-        exit(EXIT_SUCCESS);
+	if (argc != 2)
+	{
+		fprintf(stderr, "USAGE: monty file\n");
+		exit(EXIT_FAILURE);
+	}
+	file = fopen(argv[1], "r");
+	var.file = file;
+	if (file == NULL)
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+		exit(EXIT_FAILURE);
+	}
+	while (characters > 0)
+	{
+		buffer = NULL;
+		characters = getline(&buffer, &bufsize, file);
+		var.data = buffer;
+		counter++;
+		if (characters > 0)
+			execute(&stack, counter, file, buffer);
+		free(buffer);
+	}
+	stack_free(stack);
+	fclose(file);
+	return (0);
 }
