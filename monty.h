@@ -70,4 +70,5 @@ void o_pop(stack_t **stack, unsigned int counter);
 void o_swap(stack_t **stack, unsigned int counter);
 void o_add(stack_t **stack, unsigned int counter);
 void o_nop(stack_t **stack, unsigned int counter);
+void o_sub(stack_t **stack, unsigned int counter);
 #endif /*MONTY_H*/
