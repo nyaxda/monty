@@ -14,7 +14,7 @@ void add_dnodeint(stack_t **head, int n)
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
-		printf("Error: malloc failed\n");
+		printf("Error\n");
 		exit(0);
 	}
 	if (temp != NULL)
