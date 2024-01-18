@@ -10,5 +10,5 @@ void o_queue(stack_t **stack, unsigned int counter)
 {
 	(void)stack;
 	(void)counter;
-	var.queue = 1;
+	var.storque = 1;
 }
