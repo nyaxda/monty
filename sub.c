@@ -9,7 +9,7 @@
 void o_sub(stack_t **stack, unsigned int counter)
 {
 	stack_t *temp;
-	int len, result;
+	int len = 0, result;
 
 	temp = *stack;
 	while (temp != NULL)
