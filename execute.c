@@ -21,6 +21,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
 		{"add", o_add},
 		{"nop", o_nop},
 		{"sub", o_sub},
+		{"div", o_div},
 		{NULL, NULL}
 	};
 	token = strtok(cont, " \n\t");
