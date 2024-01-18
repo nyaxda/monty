@@ -13,6 +13,7 @@ void o_mul(stack_t **stack, unsigned int counter)
 {
 	stack_t *temp = *stack;
 	size_t len = 0;
+	int result;
 
 	while (temp != NULL)
 	{
