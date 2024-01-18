@@ -9,14 +9,11 @@
 void o_sub(stack_t **stack, unsigned int counter)
 {
 	stack_t *temp;
-	int len = 0, result;
+	int len, result;
 
 	temp = *stack;
-	while (temp != NULL)
-	{
+	for (len = 0; temp != NULL; len++)
 		temp = temp->next;
-		len++;
-	}
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
