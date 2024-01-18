@@ -26,7 +26,7 @@ void o_sub(stack_t **stack, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	temp = *stack;
-	result = temp->n - temp->next->n;
+	result = temp->next->n - temp->n;
 	temp->next->n = result;
 	*stack = (*stack)->next;
 	free(temp);
