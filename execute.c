@@ -22,7 +22,7 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
 	token = strtok(cont, " \n\t");
 	if (token == NULL)
 		return (0);
-	if (token[0] == '#')
+	if (token && token[0] == '#')
 		return (0);
 	var.arg = strtok(NULL, " \n\t");
 	while (options[i].opcode != NULL && token)
