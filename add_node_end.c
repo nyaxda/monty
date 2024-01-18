@@ -19,7 +19,7 @@ void add_dnodeint_end(stack_t **head, int n)
 	}
 	new_node->n = n;
 	new_node->next = NULL;
-	new_node->prev = NULL;  // Initialize new_node->prev to NULL
+	new_node->prev = NULL;
 	if (temp)
 	{
 		while (temp->next)
