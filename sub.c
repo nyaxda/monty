@@ -9,14 +9,15 @@
 void o_sub(stack_t **stack, unsigned int counter)
 {
 	stack_t *temp;
-	int len, result;
+	int len;
+	int result;
 
 	temp = *stack;
 	for (len = 0; temp != NULL; len++)
 		temp = temp->next;
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
 		fclose(var.file);
 		free(var.data);
 		stack_free(*stack);
