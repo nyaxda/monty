@@ -25,12 +25,12 @@ void add_dnodeint_end(stack_t **head, int n)
 	}
 	if (temp == NULL)
 	{
-		new_node->prev = NULL;
 		*head = new_node;
+		new_node->prev = NULL;
 	}
 	else
 	{
-		new_node->prev = temp;
 		temp->next = new_node;
+		new_node->prev = temp;
 	}
 }

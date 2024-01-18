@@ -55,7 +55,7 @@ typedef struct variables
 	char *arg;
 	FILE *file;
 	char *data;
-	int storque;
+	unsigned int storque;
 } vars;
 extern vars var;
 
