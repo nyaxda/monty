@@ -17,10 +17,10 @@ void add_dnodeint(stack_t **head, int n)
 		printf("Error: malloc failed\n");
 		exit(0);
 	}
-	new_node->n = n;
 	if (temp != NULL)
 		temp->prev = new_node;
-	new_node->next = temp;
+	new_node->n = n;
+	new_node->next = *head;
 	new_node->prev = NULL;
 	*head = new_node;
 }
