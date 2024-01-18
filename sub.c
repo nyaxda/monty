@@ -28,6 +28,6 @@ void o_sub(stack_t **stack, unsigned int counter)
 	temp = *stack;
 	result = temp->next->n - temp->n;
 	temp->next->n = result;
-	*stack = (*stack)->next;
+	*stack = temp->next;
 	free(temp);
 }

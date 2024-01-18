@@ -28,6 +28,6 @@ void o_add(stack_t **stack, unsigned int counter)
 	temp = *stack;
 	sum = temp->n + temp->next->n;
 	temp->next->n = sum;
-	*stack = (*stack)->next;
+	*stack = temp->next;
 	free(temp);
 }
