@@ -8,19 +8,18 @@
  */
 void o_rotl(stack_t **stack, unsigned int counter)
 {
-	stack_t *temp = *stack;
-	int temp_n;
+	stack_t *temp = *stack, *h;
 
 	(void)counter;
 	if (*stack == NULL || (*stack)->next == NULL)
 		return;
-	temp_n = temp->n;
+	h = temp->next;
+	h->prev = NULL;
+
 	while (temp->next != NULL)
-	{
-		temp->n = temp->next->n;
 		temp = temp->next;
-	}
-	tempt->next = *stack;
+
+	temp->next = *stack;
 	(*stack)->next = NULL;
 	(*stack)->prev = temp;
 	(*stack) = temp;
