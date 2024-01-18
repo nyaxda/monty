@@ -13,15 +13,10 @@ int execute(stack_t **stack, unsigned int counter, FILE *file, char *cont)
 	unsigned int i = 0;
 	char *token;
 	instruction_t options[] = {
-		{"push", o_push},
-		{"pall", o_pall},
-		{"pint", o_pint},
-		{"pop", o_pop},
-		{"swap", o_swap},
-		{"add", o_add},
-		{"nop", o_nop},
-		{"sub", o_sub},
-		{"div", o_div},
+		{"push", o_push}, {"pall", o_pall}, {"pint", o_pint},
+		{"pop", o_pop}, {"swap", o_swap}, {"add", o_add},
+		{"nop", o_nop}, {"sub", o_sub}, {"div", o_div},
+		{"mul", o_mul}, {"mod", o_mod}, {"pchar", o_pchar},
 		{NULL, NULL}
 	};
 	token = strtok(cont, " \n\t");
